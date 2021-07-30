@@ -92,6 +92,10 @@ public class CameraGLSurfaceView extends GLSurfaceView implements GLSurfaceView.
     }
 
 
+    /*
+    * SurfaceTexture有一个很重要的回调：OnFrameAvailableListener。
+    * 通过名字也可以看出该回调的调用时机，当相机有新的预览帧数据时，此回调会被调用。
+    * 所以我们为前面的SurfaceTexture设置一个回调，来通知我们相机预览数据已更新：*/
     @Override
     public void onFrameAvailable(SurfaceTexture surfaceTexture) {
         // TODO Auto-generated method stub
